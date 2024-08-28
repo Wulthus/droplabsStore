@@ -1,68 +1,190 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/*----------------------------------------------------------CSS RESET--------------*/
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-a:hover {
-  color: #535bf2;
-}
-
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+	line-height: 1;
+  
+  height: 100vh;
+  width: 100vw;
+  height: 100dvh;
+  width: 100dvw;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------------------------------------------------------ELEMENTS--------------*/
+
+#root {
+width: 100%;
+height: 100%;
+padding: 1rem;
+
+display: flex;
+
+
+background: linear-gradient(90deg, rgba(44,0,141,0.86) 0%, rgba(145,4,255,0.86) 100%);
+}
+
+.root-aside {
+  width: 17.5%;
+  height: 100%;
+}
+
+.root-main {
+  width: 83.5%;
+  height: 100%;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+	font-size: 3rem;
+	text-align: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h2 {
+	font-size: 2rem;
+	text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+h3 {
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.navbar {
+  width: 98%;
+  height: 98%;
+
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 2%;
+  box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section {
+	width: 98%;
+	height: 98%;
+
+	padding: 2%;
+
+	color: #fff;
+}
+
+.products__content {
+	width: 96%;
+	height: 75%;
+	overflow-y: scroll;
+}
+
+.products__hgroup {
+	padding: 2%;
+	height: 10%;
+}
+
+.products-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+}
+
+
+
+
+
+.product-card {
+	color: #000;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 2%;
+	box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.2);
+
+	width: 96%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	transition: all .2s;
+}
+
+.product-card:hover{
+	transform: translateY(-3px);
+
+}
+
+.product-card__figure {
+	max-width: 100px;
+}
+
+.sort-bar {
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: end;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.sort-bar__button {
+	background-color: #fff;
+	border-radius: 100px;
+	border: none;
+	transition: all .2s;
+}
+
+.sort-bar__button:hover {
+	transform: translateY(-1px);
+}
+
+.sort-bar__button:active {
+	transform: translateY(1px);
+}
+
+
+.loader {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
