@@ -133,6 +133,7 @@ h3 {
 
 .product-card {
 	color: #000;
+	text-decoration: none;
 	background-color: #fff;
 	border-radius: 5px;
 	padding: 2%;
@@ -178,6 +179,20 @@ h3 {
 
 .sort-bar__button:active {
 	transform: translateY(1px);
+}
+
+.product {
+	width: 90%;
+	color: #000;
+	text-decoration: none;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 2%;
+	box-shadow: 10px 10px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.product__image {
+	max-width: 25%;
 }
 
 

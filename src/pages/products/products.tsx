@@ -45,7 +45,7 @@ export const Products: React.FC = function(){
                 <ul className="products-list">
                     {products.map((product: fakeProduct) => {
                         return (
-                            <ProductCard image={product.image} title={product.title} price={product.price} key={product.id}/>
+                            <ProductCard image={product.image} title={product.title} price={product.price} key={product.id} id={product.id}/>
                         )
                     })}
                 </ul>
