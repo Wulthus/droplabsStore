@@ -1,4 +1,4 @@
-export type fakeProduct = {
+export type FakeProduct = {
     id: number,
     title: string,
     image: string,

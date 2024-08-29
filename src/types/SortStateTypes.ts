@@ -1,0 +1,1 @@
+export type SortStateType = "default" | "priceAsc" | "priceDesc" | "nameAsc" | "nameDesc"
